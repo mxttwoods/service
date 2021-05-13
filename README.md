@@ -20,7 +20,9 @@ In order to learn how to approach package design in Go, you can read the followi
 - [Standard Package Layout - Ben Johnson](https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1#.ds38va3pp)
 - [Go best practices, six years in - Peter Bourgon](https://peter.bourgon.org/go-best-practices-2016/#repository-structure)
 
-Once done, this article will help you understand the [Design Philosophy On Packaging by William Kennedy](https://www.ardanlabs.com/blog/2017/02/design-philosophy-on-packaging.html).
+Once done, this article will help you understand
+the [Design Philosophy On Packaging by William Kennedy](https://www.ardanlabs.com/blog/2017/02/design-philosophy-on-packaging.html)
+.
 
 ### Exposing Go applications to the Internet
 
