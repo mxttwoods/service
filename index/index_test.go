@@ -1,4 +1,4 @@
-package homepage
+package index
 
 import (
 	"net/http"
@@ -19,7 +19,7 @@ func TestHandlers_Handler(t *testing.T) {
 			in:             httptest.NewRequest("GET", "/", nil),
 			out:            httptest.NewRecorder(),
 			expectedStatus: http.StatusOK,
-			expectedBody:   message,
+			expectedBody:   msg,
 		},
 	}
 

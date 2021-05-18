@@ -4,11 +4,10 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"service/homepage"
+	"service/index"
 	"service/server"
 )
 
-// env variables
 var (
 	CertFile    = os.Getenv("CERT_FILE")
 	KeyFile     = os.Getenv("KEY_FILE")
@@ -17,17 +16,13 @@ var (
 
 func main() {
 	logger := log.New(os.Stdout, " ", log.LstdFlags|log.Lshortfile)
-
-	h := homepage.NewHandlers(logger)
-
+	h := index.NewHandlers(logger)
 	mux := http.NewServeMux()
 	h.SetupRoutes(mux)
-
 	srv := server.New(mux, ServiceAddr)
-
-	logger.Println("server starting")
+	logger.Println("Server starting")
 	err := srv.ListenAndServeTLS(CertFile, KeyFile)
 	if err != nil {
-		logger.Fatalf("server failed to start: %v", err)
+		logger.Fatalf("Server failed to start: %v", err)
 	}
 }
